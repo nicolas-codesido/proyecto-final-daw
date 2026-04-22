@@ -1,0 +1,169 @@
+.dashboard-container {
+  padding: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs-container {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabs-nav {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.tab-button.active {
+  background: white;
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.chart-wrapper {
+  display: none;
+}
+
+.chart-wrapper.active {
+  display: block;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid #6c757d;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  padding: 15px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.chart-container canvas {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .tabs-nav {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    text-align: left;
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    padding: 8px 15px;
+  }
+
+  .tab-button.active {
+    border-bottom: none;
+    border-left-color: #007bff;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+
+  .chart-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 220px;
+  }
+
+  .chart-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .tab-content {
+    padding: 12px;
+  }
+
+  .tab-button {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}

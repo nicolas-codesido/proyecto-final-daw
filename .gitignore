@@ -1,0 +1,4 @@
+vendor/
+mailhog/
+*.mp4
+.DS_Store

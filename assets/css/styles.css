@@ -1,0 +1,252 @@
+:root {
+  --primary-blue: #387297;
+  --light-blue: #c3f2ff;
+  --brd: rgba(0, 0, 0, 0.6);
+  --input-padding: clamp(1.2rem, 4vw, 0.8rem) 0;
+  --input-font-size: clamp(0.8rem, 3vw, 0.9rem);
+  --select-font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+  --button-font-size: clamp(0.7rem, 2.8vw, 0.8rem);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--primary-blue);
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-bottom: clamp(0.8rem, 2vw, 1.2rem);
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
+  margin: 0;
+}
+
+header h1 {
+  color: white;
+  letter-spacing: clamp(1px, 0.5vw, 2px);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  margin: 0;
+}
+
+header a {
+  color: white;
+  font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+  width: fit-content;
+  display: inline-block;
+  margin-top: 0.3rem;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+header a:hover {
+  opacity: 1;
+}
+
+main {
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 5vw, 2rem);
+}
+
+main form {
+  width: clamp(280px, 75vw, 400px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: clamp(2rem, 5vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+main form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main form img.logo-form {
+  width: 120px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+main:has(.form-grid) {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+h2 {
+  font-weight: 400;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin-bottom: clamp(1rem, 4vw, 2rem);
+  color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+main form,
+.obligatorio,
+button,
+a {
+  font-size: clamp(0.8rem, 3.5vw, 1rem);
+}
+
+input {
+  padding: clamp(0.6rem, 2.5vw, 0.8rem) 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--brd);
+  font-size: var(--input-font-size);
+  background: transparent;
+}
+
+input::placeholder {
+  font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+  color: var(--brd);
+}
+
+input:focus,
+input:hover {
+  border-color: black;
+}
+
+input[type="date"] {
+  color: var(--brd);
+}
+
+input[type="date"].negro::-webkit-calendar-picker-indicator {
+  filter: invert(0%);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.inputContenedor {
+  position: relative;
+  width: 100%;
+}
+
+.inputContenedor input {
+  width: 100%;
+  padding-right: clamp(30px, 8vw, 35px);
+  box-sizing: border-box;
+}
+
+.ojo {
+  position: absolute;
+  right: clamp(6px, 2vw, 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brd);
+  cursor: pointer;
+  font-size: var(--button-font-size);
+}
+
+select {
+  padding: var(--input-padding);
+  border: none;
+  border-bottom: 1px solid var(--brd);
+  background: transparent;
+  color: var(--brd);
+  outline: none;
+  font-size: var(--select-font-size);
+}
+
+select:focus,
+select:hover {
+  border-color: black;
+  color: black;
+}
+
+select.selected {
+  color: black;
+}
+
+button {
+  height: clamp(35px, 8vw, 40px);
+  width: clamp(140px, 40vw, 160px);
+  margin-top: clamp(0.8rem, 3vw, 1rem);
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  font-size: var(--button-font-size);
+}
+
+button:hover {
+  background: white;
+  border-color: black;
+}
+
+.obligatorio {
+  margin-top: 0.2rem;
+  font-style: normal;
+  height: clamp(14px, 4vw, 16px);
+  font-size: var(--button-font-size);
+  color: black;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 0 auto;
+  min-width: 800px;
+  background: white;
+  max-width: 1200px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grid .card h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.form-grid button {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem;
+}
+
+.logout-corner {
+  position: fixed;
+  top: clamp(0.8rem, 3vw, 1rem);
+  right: clamp(0.8rem, 3vw, 1rem);
+  color: white;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.logout-corner:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    min-width: 0;
+    padding: clamp(1rem, 5vw, 2rem);
+  }
+}
