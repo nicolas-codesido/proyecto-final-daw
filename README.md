@@ -1,4 +1,4 @@
-## 📺 # Affluens
+Affluens
 
 Plataforma web SaaS para la gestión de asesorías financieras.
 Permite gestionar usuarios con un sistema de roles jerárquicos 
