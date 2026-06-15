@@ -1,6 +1,7 @@
 Affluens
 
 Plataforma web SaaS para la gestión de asesorías financieras.
+
 Permite gestionar usuarios con un sistema de roles jerárquicos
 y la visualización de estadísticas.
 
